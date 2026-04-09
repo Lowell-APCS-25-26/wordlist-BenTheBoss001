@@ -9,7 +9,7 @@ public class WordList
   public void add(String word) { myList.add(word); }
   public String toString() { return myList.toString(); }
 
-  public int numWordsOfLength(int len)
+ public int numWordsOfLength(int len)
   {
     int answer = 0;
     for(int i = 0; i < myList.size(); i++){
@@ -29,4 +29,3 @@ public class WordList
       }
     }
   }
-}
