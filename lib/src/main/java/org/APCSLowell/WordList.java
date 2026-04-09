@@ -9,12 +9,23 @@ public class WordList
   public void add(String word) { myList.add(word); }
   public String toString() { return myList.toString(); }
 
-  public int numWordsOfLength(int len)
+ public int numWordsOfLength(int len)
   {
-     //your code goes here
+    int answer = 0;
+    for(int i = 0; i < myList.size(); i++){
+      if(myList.get(i).length() == len){
+        answer++;
+      }
+    }
+    return answer;
   }
 
   public void removeWordsOfLength(int len)
   {
-    //your code goes here
-}
+    for(int i = 0; i < myList.size(); i++){
+      if(myList.get(i).length() == len){
+        myList.remove(i);
+        i--;
+      }
+    }
+  }
